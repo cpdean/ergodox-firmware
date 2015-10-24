@@ -143,7 +143,7 @@ KB_MATRIX_LAYER(
 	KEY_DeleteForward,	0,	0,	
 	// right hand
 	KEY_F12,	KEY_F6,	KEY_F7,	KEY_F8,	KEY_F9,	KEY_F10,	0,	
-	0,	0,	0,	0,	0,	0,	0,	
+	0,	0,	KEY_LeftBracket_LeftBrace,	KEY_RightBracket_RightBrace,	0,	0,	0,	
 	KEY_LeftArrow,	KEY_DownArrow,	KEY_UpArrow,	KEY_RightArrow,	0,	0,	
 	0,	0,	0,	0,	0,	0,	KEY_LeftShift,	
 	0,	0,	0,	0,	0,	
@@ -378,7 +378,7 @@ KB_MATRIX_LAYER(
 	kprrel,	NULL,	NULL,	
 	// right hand
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	kprrel,	kprrel,	NULL,	NULL,	NULL,	
 	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	kprrel,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
@@ -613,7 +613,7 @@ KB_MATRIX_LAYER(
 	kprrel,	NULL,	NULL,	
 	// right hand
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	kprrel,	kprrel,	NULL,	NULL,	NULL,	
 	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	kprrel,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
