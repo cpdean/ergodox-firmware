@@ -67,11 +67,11 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |  Esc   | 1    |  2   | 3    | 4    | 5    | + =  |           | +L2  | 6    | 7 &  | 8 *  | 9 (  | 0 )  |   -_   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |  Tab   |   Q  |   W  |   E  |   R  |   T  | \  | |           | {    |   Y  |   U  |   I  |   O  |  P   |  } ]   |
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  | \  | |           | {    |   Y  |   U  |   I  |   O  |   P  |  } ]   |
  * |--------+------+------+------+------+------|  \ | |           | [    |------+------+------+------+------+--------|
- * | LCtrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |  j   | k    |  l   |  ; : |  ' "   |
+ * | LCtrl  |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |  ; : |  ' "   |
  * |--------+------+------+------+------+------|  ~L1 |           | ~L1  |------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |  M   |  ,<  |  . > | / ?  | RShift |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  ,<  |  . > | / ?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | LGui | LAlt | LGui |   (  |  )   |                                       |  Esc |  | \ | UP   | RIGHT| RGui |
  *   `----------------------------------'                                       `----------------------------------'
@@ -80,7 +80,7 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      | ~ `  |       | PGUP |      |      |
  *                                 | BkSp | Del  |------|       |------| Enter| Space|
- *                                 |      |      | LGUi |       | RGui |      |      |
+ *                                 |      |      | ~L1  |       | ~L1  |      |      |
  *                                 `--------------------'       `--------------------'
  */
 KB_MATRIX_LAYER(
@@ -95,7 +95,7 @@ KB_MATRIX_LAYER(
     // left thumb cluster
 	KEY_LeftControl,	KEY_LeftAlt,
 	0,	0,	KEY_GraveAccent_Tilde,
-	KEY_DeleteBackspace,	KEY_DeleteForward,	KEY_LeftGUI,
+	KEY_DeleteBackspace,	KEY_DeleteForward,	1,
 	// right hand
 	2,	KEY_6_Caret,	KEY_7_Ampersand,	KEY_8_Asterisk,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	KEY_Dash_Underscore,
 	KEY_LeftBracket_LeftBrace,	KEY_y_Y,	KEY_u_U,	KEY_i_I,	KEY_o_O,	KEY_p_P,	KEY_RightBracket_RightBrace,
@@ -105,7 +105,7 @@ KB_MATRIX_LAYER(
     // right thumb cluster
 	KEY_RightAlt,	KEY_Backslash_Pipe,
 	KEY_PageUp,	0,	0,
-	KEY_RightGUI,	KEY_ReturnEnter,	KEY_Spacebar
+	1,	KEY_ReturnEnter,	KEY_Spacebar
 ),
 /*
  * LAYER 1
@@ -113,11 +113,11 @@ KB_MATRIX_LAYER(
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |  F1  |  F2  |  F3  |  F4  |  F5  | F11  |           | F12  |  F6  |  F7  |  F8  |  F9  | F10  |        |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |        |      |      |      |      |      |      |           |      |      | [ {  | ] }  |      |      |        |
  * |--------+------+------+------+------+------| -L1  |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |------|           |------| LEFT | DOWN |  UP  |RIGHT |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | LShift |      |      |      |      |      |      |           |      |      |      |      |      |      | RShift |
+ * | LShift |      |      |      |      |      |      |           |      |      |   (  |   )  |      |      | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   | RGui | RAlt |      |      |      |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -145,7 +145,7 @@ KB_MATRIX_LAYER(
 	KEY_F12,	KEY_F6,	KEY_F7,	KEY_F8,	KEY_F9,	KEY_F10,	0,
 	0,	0,	KEY_LeftBracket_LeftBrace,	KEY_RightBracket_RightBrace,	0,	0,	0,
 	KEY_LeftArrow,	KEY_DownArrow,	KEY_UpArrow,	KEY_RightArrow,	0,	0,
-	0,	0,	0,	0,	0,	0,	KEY_LeftShift,
+	0,	0,	KEY_9_LeftParenthesis,	KEY_0_RightParenthesis,	0,	0,	KEY_LeftShift,
 	0,	0,	0,	0,	0,
 	0,	0,
 	0,	0,	0,
@@ -352,7 +352,7 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	sshprre,	sshprre,
 	kprrel,	kprrel,
 	NULL,	NULL,	kprrel,
-	kprrel,	kprrel,	kprrel,
+	kprrel,	kprrel,	lpush1,
 	// right hand
 	lpush2,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
@@ -361,7 +361,7 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,
 	kprrel,	NULL,	NULL,
-	kprrel,	kprrel,	kprrel
+	lpush1,	kprrel,	kprrel
 ),
 // LAYER 1
 KB_MATRIX_LAYER(
@@ -380,7 +380,7 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
 	NULL,	NULL,	kprrel,	kprrel,	NULL,	NULL,	NULL,
 	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	kprrel,
+	NULL,	NULL,	sshprre,	sshprre,	NULL,	NULL,	kprrel,
 	NULL,	NULL,	NULL,	NULL,	NULL,
 	NULL,	NULL,
 	NULL,	NULL,	NULL,
@@ -587,7 +587,7 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	sshprre,	sshprre,
 	kprrel,	kprrel,
 	NULL,	NULL,	kprrel,
-	kprrel,	kprrel,	kprrel,
+	kprrel,	kprrel,	lpop1,
 	// right hand
 	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
@@ -596,7 +596,7 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,
 	kprrel,	kprrel,
 	kprrel,	NULL,	NULL,
-	kprrel,	kprrel,	kprrel
+	lpop1,	kprrel,	kprrel
 ),
 // LAYER 1
 KB_MATRIX_LAYER(
@@ -615,7 +615,7 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,
 	NULL,	NULL,	kprrel,	kprrel,	NULL,	NULL,	NULL,
 	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	NULL,
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	kprrel,
+	NULL,	NULL,	sshprre,	sshprre,	NULL,	NULL,	kprrel,
 	NULL,	NULL,	NULL,	NULL,	NULL,
 	NULL,	NULL,
 	NULL,	NULL,	NULL,
